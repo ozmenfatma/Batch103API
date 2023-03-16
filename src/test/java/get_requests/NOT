@@ -1,0 +1,19 @@
+
+ BODY()  ==>
+ //Tek body() methodu içerisinde çoklu assertion yaparak soft assertion oluşturabilirsiniz.
+  Fail durumunda body() içerisinde Java çalışmayı durdurmaz.
+ //Çoklu body() methodu ile assertion yapıldığında fail durumunda Java bir sonraki body() methodu öncesi çaılışmayı durdurur.
+
+
+ /*
+    Api üzerinde Body içerisinde yer almayan değerler için herhangi bir ekstra methoda gerek duymadan assert yapılırken,
+    Body içerisinde yer alan değerler için body() methodu ile birlikte Matchers kullanılarak assert yapılır.
+ */
+
+
+ /*
+ https://restful-booker.herokuapp.com/booking?firstname=Josh&lastname=Allen
+
+ booking -> path param
+ ?  --> query param basladigini gosterir
+
