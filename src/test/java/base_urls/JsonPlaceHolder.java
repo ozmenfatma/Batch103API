@@ -11,7 +11,7 @@ public class JsonPlaceHolder {
 
     @Before//Her test methodundan önce çalışır.
     public void setUp(){  //setup methodu calismazxcsa RequestSpecification null olur
-        spec = new RequestSpecBuilder().setAccept(ContentType.JSON).setBaseUri("https://jsonplaceholder.typicode.com").build();
+        spec = new RequestSpecBuilder().setContentType(ContentType.JSON).setAccept(ContentType.JSON).setBaseUri("https://jsonplaceholder.typicode.com").build();
 
         //artik accept type ve url hep burda,authenticvation, surekli gonderecegim body ,content type hepsini burda olusturabilirz
 
