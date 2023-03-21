@@ -17,3 +17,31 @@
  booking -> path param
  ?  --> query param basladigini gosterir
 
+--> response body imiz daima Json data tipindedir
+--> apilerin isteklerininn (request)leri gonderdigi ve kaynagin (resource) bulundugu yer endpoint(URL,URI) dir
+
+-->as() methodu de-serialization : response alip Map(Java) e cevir
+
+--de-serialization =>
+
+1) response.body(path,hamcrest Matchers (hasItem()...))
+
+2)response.jsonPath().getlist()/getString()
+
+3) response.as(HashMap.class)  ===> Gson ekle dependicies  (serialization ve de -serialization icin dependicies yuklenir cevirmek icin)
+
+4)response.as(Pojo.class)
+
+5) ObjectMapper().readValue(String data , HashMap.class)  -- Json formatindaki datayi string yapip readvalue iicne koyuyoruz, response.asString olarak da koyaruz
+   ObjectMapper().readValue(String data , Pojo.class)
+
+---API de en sikintili durum datalarin birbierine donusumu
+
+----gelen response daki id sistem tarafimdan eklemir, o asseert edilmez
+
+
+Payload==> karsiya gonderilen data (post ile)
+
+
+
+//zaten id ile sorgulama yapildgi icin get lerde id yi tekrardan expected data icine koymuyoruz, hemde genelde degisken oluyior

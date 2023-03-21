@@ -1,3 +1,19 @@
 
 //  Json ---> De serilization (json objelerini java formatına cevirir)
 //  Gson ---> Serilization (java objelerini json formatina cevirir)
+
+//post yaapcagm zaman setaccept(contentType.Json) koymaliyim url kisminia,, karsi tarafin hangi data ile alacagini gosteriyor
+karşı tarafın kabul ettiği data type yani
+
+//Object Mapper icin dependicies yukleme lazim
+<dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>1.9.13</version>
+    </dependency>
+
+
+//toString -> 'String'e' anlaminda
+  asString -> 'String olarak' anlaminda
+
+

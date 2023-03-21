@@ -11,7 +11,7 @@ public class RegresUri {
 
     @Before//Her test methodundan önce çalışır.
     public void setUp() {  //setup methodu calismazxcsa RequestSpecification null olur
-        spec = new RequestSpecBuilder().setAccept(ContentType.JSON).setBaseUri("https://reqres.in/api/users/").build();
+        spec = new RequestSpecBuilder().setContentType(ContentType.JSON).setAccept(ContentType.JSON).setBaseUri("https://reqres.in/api/users/").build();
 
         //artik accept type ve url hep burda,authenticvation, surekli gonderecegim body ,content type hepsini burda olusturabilirz
 

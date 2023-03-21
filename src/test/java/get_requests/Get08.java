@@ -56,7 +56,7 @@ public class Get08 extends JsonPlaceHolder {
         //Send The Request and get The response
 
         Response response=  given().spec(spec).get("/{first}/{second}");
-        response.prettyPrint();
+        response.prettyPrint();// response body si ni yazdirir
 
         //do Assertion  --ve sonra Json ile karsilastir asMAp ile de-serialization
 
