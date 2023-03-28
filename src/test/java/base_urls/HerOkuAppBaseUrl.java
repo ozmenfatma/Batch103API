@@ -4,6 +4,8 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
+import static util.AuthenticationHerOkuApp.generateToken;
+
 
 public class HerOkuAppBaseUrl {
 
@@ -11,7 +13,8 @@ public class HerOkuAppBaseUrl {
 
     @Before//Her test methodundan önce çalışır.
     public void setUp() {  //setup methodu calismazxcsa RequestSpecification null olur
-        spec = new RequestSpecBuilder().setContentType(ContentType.JSON).setBaseUri("https://restful-booker.herokuapp.com").build();
+        spec = new RequestSpecBuilder().addHeader("Cookie", "token=" + generateToken()).
+                setContentType(ContentType.JSON).setBaseUri("https://restful-booker.herokuapp.com").build();
 
 
     }

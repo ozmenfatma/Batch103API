@@ -45,7 +45,7 @@ Given
 
         //set the expected data
 
-       Map<String,Object> expectedData= new JsonPlaceHolderTestData().expectedDataMethod(55,"Tidy your room",false);
+       Map<String,Object> expectedData= new JsonPlaceHolderTestData().expectedDataMethod(55,"Tidy your room",false);//tesdatayi map oldugu icin kullandik bunu pojo clas ile de yapabilriz
         System.out.println("expectedData = " + expectedData);
 
         //send the request and get the response

@@ -8,6 +8,7 @@ import pojos.JsonPlaceHolderPojo;
 import util.ObjectMapperUtils;
 
 import static io.restassured.RestAssured.given;
+import static junit.framework.TestCase.assertEquals;
 
 public class Post05ObjectMapper_Pojo extends JsonPlaceHolder {
 /*
@@ -51,7 +52,15 @@ public class Post05ObjectMapper_Pojo extends JsonPlaceHolder {
             // JsonPlaceHolderPojo actualdata=      new ObjectMapper().readValue(response.asString(), JsonPlaceHolderPojo.class);
             //ustteki yerine alttakini yaptik
             JsonPlaceHolderPojo actualData = ObjectMapperUtils.convertJsonToJava(response.asString(),JsonPlaceHolderPojo.class);
+            //burda readvalue kullanmiyorum onu objectmapperutils de try catch ile yapiyorum, boylelikle throws olmuyor
+            //convertJsonToJava  --> readvalue kullanmayalim diye yaptigimiz bir method
+
             System.out.println("actualData = " + actualData);
+
+            assertEquals(201, response.statusCode());
+            assertEquals(expectedData.getUserId(), actualData.getUserId());
+            assertEquals(expectedData.getTitle(), actualData.getTitle());
+            assertEquals(expectedData.getCompleted(), actualData.getCompleted());
 
 
         }
